@@ -53,26 +53,27 @@ endif; ?>
 		<fieldset>
 			<legend><?php echo JText::_('LOGIN') ?></legend>
 			
-			<div>
-				<label class="label-left" for="username"><?php echo JText::_('Username') ?></label>
-				<input name="username" id="username" type="text" class="inputbox" alt="username" size="18" />
-			</div>
-			<div>
-				<label class="label-left" for="passwd"><?php echo JText::_('Password') ?></label>
-				<input type="password" id="passwd" name="passwd" class="inputbox" size="18" alt="password" />
-			</div>
+			<dl>
+				<dt><label class="label-left" for="username"><?php echo JText::_('Username') ?></label></dt>
+				<dd><input name="username" id="username" type="text" class="inputbox" alt="username" size="18" /></dd>
+			</dl>
+			<dl>
+				<dt><label class="label-left" for="passwd"><?php echo JText::_('Password') ?></label></dt>
+				<dd><input type="password" id="passwd" name="passwd" class="inputbox" size="18" alt="password" /></dd>
+			</dl>
 			<?php if(JPluginHelper::isEnabled('system', 'remember')) : ?>
-			<div>
-				<label for="remember"><?php echo JText::_('Remember me') ?></label>
-				<input type="checkbox" id="remember" name="remember" class="inputbox" value="yes" alt="Remember Me" />
-			</div>
+			<dl>
+				<dt><label for="remember"><?php echo JText::_('Remember me') ?></label></dt>
+				<dd><input type="checkbox" id="remember" name="remember" class="inputbox" value="yes" alt="Remember Me" /></dd>
+			</dl>
 			<?php endif; ?>
-			<div>
-				<input type="submit" name="Submit" class="button" value="<?php echo JText::_('LOGIN') ?>" />
-			</div>
-			
+			<dl>
+				<dt>&nbsp;</dt>
+				<dd><input type="submit" name="Submit" class="button" value="<?php echo JText::_('LOGIN') ?>" /></dd>
+			</dl>
 		</fieldset>
 	
+		<?php if (false): ?>
 		<ul>
 			<li>
 				<a href="<?php echo JRoute::_( 'index.php?option=com_user&view=reset' ); ?>"><?php echo JText::_('FORGOT_YOUR_PASSWORD'); ?></a>
@@ -87,6 +88,7 @@ endif; ?>
 			</li>
 			<?php endif; ?>
 		</ul>
+		<?php endif; ?>
 
 		<input type="hidden" name="option" value="com_user" />
 		<input type="hidden" name="task" value="login" />
