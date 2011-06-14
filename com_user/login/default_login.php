@@ -54,16 +54,16 @@ endif; ?>
 			<legend><?php echo JText::_('LOGIN') ?></legend>
 			
 			<dl>
-				<dt><label class="label-left" for="username"><?php echo JText::_('Username') ?></label></dt>
+				<dt><label class="label-left" for="username"><?php echo JText::_('Email Address') ?>:</label></dt>
 				<dd><input name="username" id="username" type="text" class="inputbox" alt="username" size="18" /></dd>
 			</dl>
 			<dl>
-				<dt><label class="label-left" for="passwd"><?php echo JText::_('Password') ?></label></dt>
+				<dt><label class="label-left" for="passwd"><?php echo JText::_('Password') ?>:</label></dt>
 				<dd><input type="password" id="passwd" name="passwd" class="inputbox" size="18" alt="password" /></dd>
 			</dl>
 			<?php if(JPluginHelper::isEnabled('system', 'remember')) : ?>
 			<dl>
-				<dt><label for="remember"><?php echo JText::_('Remember me') ?></label></dt>
+				<dt><label for="remember"><?php echo JText::_('Remember me') ?>:</label></dt>
 				<dd><input type="checkbox" id="remember" name="remember" class="inputbox" value="yes" alt="Remember Me" /></dd>
 			</dl>
 			<?php endif; ?>
