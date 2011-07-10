@@ -51,10 +51,12 @@ endif; ?>
 		
 		<form action="<?php echo JRoute::_( 'index.php', true, $this->params->get('usesecure')); ?>" method="post" name="com-login" id="com-form-login">
 		<fieldset>
+			<? if (false): ?>
 			<legend><?php echo JText::_('LOGIN') ?></legend>
+			<? endif; ?>
 			
 			<dl>
-				<dt><label class="label-left" for="username"><?php echo JText::_('Email Address') ?>:</label></dt>
+				<dt><label class="label-left" for="username"><?php echo JText::_('Email Address or Username') ?>:</label></dt>
 				<dd><input name="username" id="username" type="text" class="inputbox" alt="username" size="18" /></dd>
 			</dl>
 			<dl>
