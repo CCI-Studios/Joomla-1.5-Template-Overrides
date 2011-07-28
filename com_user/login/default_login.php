@@ -51,7 +51,7 @@ endif; ?>
 		
 		<form action="<?php echo JRoute::_( 'index.php', true, $this->params->get('usesecure')); ?>" method="post" name="com-login" id="com-form-login">
 			<div>
-				<div class="label"><label class="label-left" for="username"><?php echo JText::_('Email Address or Username') ?>:</label></div>
+				<div class="label"><label class="label-left" for="username"><?php echo JText::_('Email Address') ?>:</label></div>
 				<div class="input"><input name="username" id="username" type="text" class="inputbox" alt="username" size="18" /></div>
 			</div>
 			
