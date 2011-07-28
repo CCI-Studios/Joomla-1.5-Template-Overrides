@@ -50,30 +50,26 @@ endif; ?>
 		<?php endif; ?>
 		
 		<form action="<?php echo JRoute::_( 'index.php', true, $this->params->get('usesecure')); ?>" method="post" name="com-login" id="com-form-login">
-		<fieldset>
-			<? if (false): ?>
-			<legend><?php echo JText::_('LOGIN') ?></legend>
-			<? endif; ?>
+			<div>
+				<div class="label"><label class="label-left" for="username"><?php echo JText::_('Email Address or Username') ?>:</label></div>
+				<div class="input"><input name="username" id="username" type="text" class="inputbox" alt="username" size="18" /></div>
+			</div>
 			
-			<dl>
-				<dt><label class="label-left" for="username"><?php echo JText::_('Email Address or Username') ?>:</label></dt>
-				<dd><input name="username" id="username" type="text" class="inputbox" alt="username" size="18" /></dd>
-			</dl>
-			<dl>
-				<dt><label class="label-left" for="passwd"><?php echo JText::_('Password') ?>:</label></dt>
-				<dd><input type="password" id="passwd" name="passwd" class="inputbox" size="18" alt="password" /></dd>
-			</dl>
+			<div>
+				<div class="label"><label class="label-left" for="passwd"><?php echo JText::_('Password') ?>:</label></div>
+				<div class="input"><input type="password" id="passwd" name="passwd" class="inputbox" size="18" alt="password" /></div>
+			</div>
 			<?php if(JPluginHelper::isEnabled('system', 'remember')) : ?>
-			<dl>
-				<dt><label for="remember"><?php echo JText::_('Remember me') ?>:</label></dt>
-				<dd><input type="checkbox" id="remember" name="remember" class="inputbox" value="yes" alt="Remember Me" /></dd>
-			</dl>
+			<div>
+				<div class="input">
+					<input type="checkbox" id="remember" name="remember" class="inputbox" value="yes" alt="Remember Me" />
+					<label for="remember" style="display: inline"><?php echo JText::_('Remember me') ?>
+				</div>
+			</div>
 			<?php endif; ?>
-			<dl>
-				<dt>&nbsp;</dt>
-				<dd><input type="submit" name="Submit" class="button" value="<?php echo JText::_('LOGIN') ?>" /></dd>
-			</dl>
-		</fieldset>
+			<div>
+				<div class="input"><input type="submit" name="Submit" class="button" value="<?php echo JText::_('LOGIN') ?>" /></div>
+			</div>
 	
 		<?php if (false): ?>
 		<ul>
